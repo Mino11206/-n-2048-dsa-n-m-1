@@ -16,6 +16,7 @@ int main() {
 
     char direction;
     Queue q;
+    cin >> direction;
     while(direction != 'e') {
         cin >> direction;
         moveTiles(direction, board, size, q, score);
