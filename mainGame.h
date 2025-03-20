@@ -15,9 +15,9 @@ struct Queue {
 
 // Function is used to generate random (2 or 4) number
 int generateRandNum() {
-    int option = rand() % 3;
-    if(option == 1) return 2;
-    if(option == 2) return 4;
+    int option = rand() % 2;
+    if(option == 0) return 2;
+    if(option == 1) return 4;
 }
 
 bool isEmpty(int arr[][10], int i, int j) {
@@ -28,9 +28,9 @@ bool isEmpty(int arr[][10], int i, int j) {
 // Function is used to generate random index if that index is empty fill number 2 or 4 into that index
 void generateRandEmptyIndex(int arr[][10], int n) {
     // Generate random row index
-    int i = rand() % n;
-    int j = rand() % n;
-    while (!isEmpty(arr, i, j)){
+    int i;
+    int j;
+    do {
         i = rand() % n;
         j = rand() % n;
     }
